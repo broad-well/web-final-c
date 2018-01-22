@@ -1,0 +1,260 @@
+/* General Custom CSS */
+
+/* Global variable declarations */
+* {
+    --theme-primary: #2e7d32;
+    --text-primary: #ffffff;
+
+    --theme-p-light: #60ad5e;
+    --text-p-light: #111111;
+
+    --theme-p-dark: #005005;
+    --text-p-dark: #ffffff;
+
+    --theme-secondary: #689f38;
+    --text-secondary: #111111;
+
+    --theme-s-light: #99d066;
+    --text-s-light: #111111;
+
+    --theme-s-dark: #387002;
+    --text-s-dark: #ffffff;
+
+    --generic-transition: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Custom "raised" box-shadow effect */
+[raised] {
+    box-shadow: -10px 10px darkslategrey;
+}
+
+/* Color theme usage */
+[primary] {
+    background-color: var(--theme-primary);
+    color: var(--text-primary);
+}
+[primary-light] {
+    background-color: var(--theme-p-light);
+    color: var(--text-p-light);
+}
+[primary-dark] {
+    background-color: var(--theme-p-dark);
+    color: var(--text-p-dark);
+}
+[secondary] {
+    background-color: var(--theme-secondary);
+    color: var(--text-secondary);
+}
+[secondary-light] {
+    background-color: var(--theme-s-light);
+    color: var(--text-s-light);
+}
+[secondary-dark] {
+    background-color: var(--theme-s-dark);
+    color: var(--text-s-dark);
+}
+
+/* Global layouts */
+main {
+    /*min-width: 300px;
+    max-width: 1000px;*/
+    margin: 0 auto;
+}
+
+/* Satisfying buttons. Click! */
+[clicky] {
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    cursor: pointer;
+}
+
+[clicky]:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05, 1.05);
+}
+
+[clicky]:active {
+    transform: scale(1.01, 1.01);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Blocks */
+
+block {
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+ /* Normalize hyperlink buttons */
+
+a[clicky] {
+    text-decoration: none;
+    color: inherit;
+}
+
+ .system-font,
+block,
+modal,
+slideshow > slide > description {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+block[huge] b-content {
+    text-align: left;
+    padding: 14vw 10vw;
+}
+block b-content {
+    text-align: left;
+    padding: 5vw;
+}
+block[huge] b-text {
+    font-size: 10vw;
+}
+block b-text {
+    font-size: calc(2.8vw + 7px);
+}
+block b-bg-text {
+    font-size: 2.5vw;
+    color: rgba(0, 0, 0, 0.2);
+    font-style: italic;
+    align-self: flex-end;
+    display: inline-flex;
+}
+block[huge] b-bg-text {
+    font-size: 4vw;
+}
+
+button[big] {
+    padding: 3% 8%;
+    font-size: 80%;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    border-style: none;
+    color: #eee;
+}
+
+/* Custom modal support */
+
+modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+modal > article {
+    margin: auto 0;
+    padding: 40px;
+    font-size: 1.8em;
+    background-color: var(--theme-p-light);
+    color: var(--text-p-light);
+    max-width: 70%;
+    max-height: 60%;
+    overflow: scroll;
+}
+
+modal close-button::before {
+    content: "×";
+}
+modal close-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: #dddddd;
+    font-size: 2em;
+    transition: var(--generic-transition);
+}
+modal close-button:hover {
+    color: #ffffff;
+}
+
+/* Image presentation */
+
+modal images {
+    padding-top: 20px;
+}
+
+images {
+    display: flex;
+    height: 3em;
+}
+images > img {
+    object-fit: contain;
+    max-height: 3em;
+    vertical-align: middle;
+}
+
+/* Slideshow */
+
+slideshow {
+    display: block;
+}
+slideshow > slide {
+    display: none;
+    object-fit: contain;
+    width: 100vw;
+}
+slideshow left-arrow::before {
+    content: "<";
+}
+slideshow right-arrow::before {
+    content: ">";
+}
+slideshow left-arrow,
+slideshow right-arrow {
+    position: absolute;
+    vertical-align: middle;
+    font-size: 2em;
+    background-color: rgba(0, 0, 30, 0.2);
+    border-radius: 100%;
+    transition: background-color 0.2s var(--generic-transition);
+    cursor: pointer;
+    padding: 10px;
+}
+slideshow left-arrow {
+    left: 0;
+}
+slideshow right-arrow {
+    right: 0;
+}
+slideshow left-arrow:hover,
+slideshow right-arrow:hover {
+    background-color: rgba(0, 0, 30, 0.6);
+}
+slideshow > slide > description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2em;
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+}
+/* Width-responsive box model options */
+
+@media screen and (max-width: 800px) {
+    [mobile-flex-stack] {
+        flex-direction: column;
+    }
+
+    modal > article {
+        font-size: 1.2em;
+        padding: 20px;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    images[mobile-flex-stack] > img {
+        max-height: unset;
+    }
+    images[mobile-flex-stack] {
+        max-height: unset;
+    }
+}

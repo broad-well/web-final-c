@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The C Programming Language</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script defer src="main.js"></script>
+
+    <!-- SEO Content -->
+    <meta name="description" content="A unique, fun and informative introduction to the C Programming Language, for both seasoned developers and absolute beginners.">
+
+    <!-- Import Tachyons, our Framework of Choice -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+</head>
+<body>
+    <main>
+        <header class="baskerville w-100 pa4 f1 tc" primary>
+            The C Programming Language
+        </header>
+        <nav class="flex flex-row-ns flex-column white system-font" primary mobile-flex-stack>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-purple">Welcome</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-orange">Timeline</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-dark-red">Expansion</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-blue">About</a>
+        </nav>
+        <block primary class="pa4">Click "run" below to see C in action!</block>
+        <iframe height="700px" width="100%" src="https://repl.it/@Broadwell/Welcome-To-C?lite=false" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <block huge secondary>
+            <b-content huge>
+                <b-text huge>Classic</b-text>
+            </b-content>
+            <b-bg-text>
+                Of Enduring Value
+            </b-bg-text>
+        </block>
+        <block secondary-dark>
+            <b-content>
+                <b-text>Developed by Dennis Ritchie and Ken Thompson for UNIX in 1969, C is almost 50 years old.</b-text>
+                <button big clicky style="margin: 1em auto;" triggers="classic-learnmore">Learn More</button>
+            </b-content>
+        </block>
+        <block huge primary>
+            <b-content huge>
+                <b-text huge>Universal</b-text>
+            </b-content>
+            <b-bg-text>
+                Across the Universe
+            </b-bg-text>
+        </block>
+        <block primary-dark>
+            <b-content>
+                <b-text>It's in your Operating System. It's in Airplanes and Trains. It's in your Microwave Oven.</b-text>
+                <button big clicky style="margin: 1em auto;" triggers="universal-learnmore">Learn More</button>
+            </b-content>
+        </block>
+        
+        <!-- Collection of modals -->
+        <modals>
+            <modal id="classic-learnmore">
+                <article modal>
+                    C was developed in order to rewrite the original UNIX for PDP-11. Its development began in 1972, when a large part of UNIX was rewritten in C.
+
+                    Since then, ANSI standards for C were introduced with many features that are still in use today.
+
+                    Although C has a decreasing trend where developers are more in favor of higher level languages, it is still crucial to almost everything that a modern computer does. It even has a more popular descendant&mdash;C&plus;&plus;.
+
+                    <br>
+                    <br>
+                    <img src="http://developer.download.nvidia.com/CgTutorial/elementLinks/fig1_11.jpg" alt="C Development Diagram">
+                </article>
+                <close-button></close-button>
+            </modal>
+            <modal id="universal-learnmore">
+                <article modal>
+                    C is widely used in <b>Systems Programming</b> and <b>Embedded</b> applications. Many compilers and interpreters (for Python, Ruby, Perl, Lua, etc.) are implemented in C due to its superior efficiency.
+                    <br>
+                    A listing of well-known projects implemented in C:
+                    <ul>
+                        <li>UNIX and UNIX-like (Linux, FreeBSD, macOS)</li>
+                        <li>Windows</li>
+                        <li>Firefox</li>
+                        <li>YouTube</li>
+                        <li>Google Search</li>
+                    </ul>
+                    <images mobile-flex-stack>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/204px-Tux.svg.png" alt="Tux the Linux mascot">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Get_it_from_Microsoft_Badge.svg" alt="Get it from Microsoft">
+                        <img src="yt_icon_mono_light.png" alt="YouTube">
+                        <img src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/firefox/files/2017/12/firefox-logo-300x310.png" alt="Firefox Quantum">
+                    </images>
+                </article>
+                <close-button></close-button>
+            </modal>
+        </modals>
+    </main>
+
+    <!-- Load the scripts -->
+    <script async src="c.js"></script>
+</body>
+</html>
