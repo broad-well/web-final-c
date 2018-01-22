@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The C Programming Language</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script defer src="main.js"></script>
+
+    <!-- SEO Content -->
+    <meta name="description" content="All about the fun, informative and interactive introduction to C, the universal programming language.">
+
+    <!-- Import Tachyons, our Framework of Choice -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+</head>
+<body>
+    <main>
+        <header class="baskerville w-100 pa4 f1 tc" primary>
+            The C Programming Language
+        </header>
+        <nav class="flex flex-row-ns flex-column white system-font" primary mobile-flex-stack>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-purple" href="index.html">Welcome</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-orange" href="timeline.html">Timeline</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-dark-red">Expansion</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-blue" href="#">About</a>
+        </nav>
+
+        <block primary-light>
+            <b-content>
+                <b-text>This has been a Web Design & Development I project, independent from developed CSS frameworks. All modals, slideshows, and custom tags were developed without foreign code.</b-text>
+            </b-content>
+        </block>
+        <block primary-dark>
+            <b-content>
+                <!-- Contact form -->
+                <b-text huge>Contact Me</b-text>
+                <form method="GET" id="contact-form">
+                    <input type="text" id="username" class="w-50" placeholder="Name">
+                    <input type="email" id="email" class="w-50" placeholder="Email">
+                    <textarea name="message" form="contact-form" class="w-100" placeholder="Your website about C sucks! It doesn't even make sandwiches!"></textarea>
+                    <br>
+                    <input type="submit" value="I'm Done" clicky>
+                </form>
+            </b-content>
+        </block>
+    </main>
+
+    <!-- Load the scripts -->
+    <script async src="c.js"></script>
+</body>
+</html>

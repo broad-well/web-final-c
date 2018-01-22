@@ -96,7 +96,8 @@ a[clicky] {
  .system-font,
 block,
 modal,
-slideshow > slide > description {
+slideshow > slide > description,
+b-content form {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
@@ -237,6 +238,32 @@ slideshow > slide > description {
     bottom: 10%;
     text-align: center;
 }
+
+/* Input-field layout */
+
+b-content form {
+    padding: 20px;
+    font-size: 1em;
+}
+
+b-content form input,
+b-content form textarea {
+    background: rgba(0, 0, 0, 0.2);
+    color: #bbb;
+    padding: 20px;
+    border-style: none;
+    margin: 5px;
+    display: inline;
+}
+
+b-content form input[type="submit"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0);
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
 /* Width-responsive box model options */
 
 @media screen and (max-width: 800px) {
@@ -256,5 +283,14 @@ slideshow > slide > description {
     }
     images[mobile-flex-stack] {
         max-height: unset;
+    }
+
+    b-content form {
+        font-size: 0.6em;
+    }
+
+    b-content form input,
+    b-content form textarea {
+        padding: 8px;
     }
 }
