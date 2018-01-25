@@ -36,12 +36,23 @@
                 <!-- Contact form -->
                 <b-text huge>Contact Me</b-text>
                 <form method="POST" action="https://formspree.io/hpeng2021@k12.andoverma.us" id="contact-form">
-                    <input type="text" name="username" form="contact-form" placeholder="Name">
-                    <input type="email" name="email" form="contact-form" placeholder="Email">
-                    <textarea name="message" form="contact-form" class="w-100" placeholder="A message in text"></textarea>
+                    <input type="text" list="names" name="username" form="contact-form" placeholder="Name">
+                    <input type="email" list="emails" name="email" form="contact-form" placeholder="Email">
+                    <textarea name="message" list="messages" form="contact-form" class="w-100" placeholder="This looks like a B to me."></textarea>
                     <br>
                     <input type="submit" value="Submit" clicky>
                 </form>
+                <formsupport>
+                    <datalist id="names">
+                        <option>Mr. Messina</option>
+                        <option>m2messina</option>
+                        <option>M. Messina</option>
+                    </datalist>
+                    <datalist id="emails">
+                        <option>m2messina@aps1.net</option>
+                        <option>m2messina@k12.andoverma.us</option>
+                    </datalist>
+                </formsupport>
             </b-content>
         </block>
     </main>
