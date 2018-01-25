@@ -22,7 +22,7 @@
         <nav class="flex flex-row-ns flex-column white system-font" primary mobile-flex-stack>
             <a clicky class="pa3 fl w-100 w-25-ns tc bg-purple" href="index.html">Welcome</a>
             <a clicky class="pa3 fl w-100 w-25-ns tc bg-orange" href="timeline.html">Timeline</a>
-            <a clicky class="pa3 fl w-100 w-25-ns tc bg-dark-red">Expansion</a>
+            <a clicky class="pa3 fl w-100 w-25-ns tc bg-dark-red" href="expansion.html">Expansion</a>
             <a clicky class="pa3 fl w-100 w-25-ns tc bg-blue" href="#">About</a>
         </nav>
 
@@ -35,9 +35,9 @@
             <b-content class="w-100">
                 <!-- Contact form -->
                 <b-text huge>Contact Me</b-text>
-                <form method="GET" id="contact-form">
-                    <input type="text" id="username" form="contact-form" placeholder="Name">
-                    <input type="email" id="email" form="contact-form" placeholder="Email">
+                <form method="POST" action="https://formspree.io/hpeng2021@k12.andoverma.us" id="contact-form">
+                    <input type="text" name="username" form="contact-form" placeholder="Name">
+                    <input type="email" name="email" form="contact-form" placeholder="Email">
                     <textarea name="message" form="contact-form" class="w-100" placeholder="A message in text"></textarea>
                     <br>
                     <input type="submit" value="Submit" clicky>

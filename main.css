@@ -138,6 +138,16 @@ button[big] {
     color: #eee;
 }
 
+b-content button-set {
+    display: flex;
+    padding: 30px;
+}
+
+b-content button-set button {
+    margin: 10px;
+    padding: 15px !important;
+}
+
 /* Custom modal support */
 
 modal {
@@ -352,6 +362,14 @@ b-content form input[type="submit"]:active {
     b-content form input,
     b-content form textarea {
         padding: 8px;
+    }
+
+    b-content button-set {
+        padding: 20px;
+    }
+    
+    b-content button-set button {
+        margin: 5px;
     }
 
     slideshow > slide > description {

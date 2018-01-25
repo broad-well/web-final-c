@@ -13,7 +13,7 @@ for (let element of Array.from(document.querySelectorAll("[triggers]"))) {
             console.error(`ItemNotFoundError: Clicked button triggers ID '${targetId}', but it doesn't exist`);
             return;
         }
-        targetElement.style.display = targetElement.style.display === "none" ? "flex" : "none";
+        targetElement.style.display = targetElement.style.display !== "flex" ? "flex" : "none";
     }))(element.getAttribute("triggers")));
 }
 
