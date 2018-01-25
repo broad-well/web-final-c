@@ -67,7 +67,9 @@ main {
     cursor: pointer;
 }
 
-[clicky]:hover {
+[clicky]:hover,
+b-content form input:focus,
+b-content form textarea:focus {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
     transform: scale(1.05, 1.05);
 }
@@ -197,29 +199,29 @@ images > img {
 /* Slideshow */
 
 slideshow {
-    display: block;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    position: relative;
 }
 slideshow > slide {
     display: none;
-    object-fit: contain;
     width: 100vw;
-}
-slideshow left-arrow::before {
-    content: "<";
-}
-slideshow right-arrow::before {
-    content: ">";
+    overflow: hidden;
+    position: relative;
 }
 slideshow left-arrow,
 slideshow right-arrow {
-    position: absolute;
-    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
     font-size: 2em;
     background-color: rgba(0, 0, 30, 0.2);
-    border-radius: 100%;
     transition: background-color 0.2s var(--generic-transition);
     cursor: pointer;
     padding: 10px;
+    flex-direction: column;
+    display: flex;
 }
 slideshow left-arrow {
     left: 0;
@@ -232,11 +234,53 @@ slideshow right-arrow:hover {
     background-color: rgba(0, 0, 30, 0.6);
 }
 slideshow > slide > description {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 2em;
+    color: #eee;
+    font-size: 1.8em;
     position: absolute;
     bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 70%;
+    background-color: rgba(100, 100, 100, 0.9);
+    padding: 10px;
     text-align: center;
+}
+
+slideshow .active-slide {
+    display: flex;
+}
+
+slideshow dots dot {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 100%;
+    background-color: #333;
+    transition: all 0.2s var(--generic-transition);
+    display: inline-flex;
+    cursor: pointer;
+}
+
+slideshow dots {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(200, 200, 200, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+slideshow dots dot:hover {
+    background-color: #111;
+}
+
+slideshow slide img {
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+    width: 100%;
 }
 
 /* Input-field layout */
@@ -244,6 +288,8 @@ slideshow > slide > description {
 b-content form {
     padding: 20px;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 b-content form input,
@@ -253,7 +299,15 @@ b-content form textarea {
     padding: 20px;
     border-style: none;
     margin: 5px;
-    display: inline;
+    transition: all 0.3s var(--generic-transition);
+}
+
+b-content form textarea {
+    resize: vertical;
+}
+
+#contact-form input {
+    flex: 0 0 50%;
 }
 
 b-content form input[type="submit"] {
@@ -262,6 +316,11 @@ b-content form input[type="submit"] {
     background: rgba(0, 0, 0, 0);
     font-size: 0.8em;
     border-radius: 5px;
+    transition: all 0.1s var(--generic-transition);
+}
+
+b-content form input[type="submit"]:active {
+    transform: scale(20, 20);
 }
 
 /* Width-responsive box model options */
@@ -286,11 +345,28 @@ b-content form input[type="submit"] {
     }
 
     b-content form {
-        font-size: 0.6em;
+        font-size: 0.7em;
+        padding: 0;
     }
 
     b-content form input,
     b-content form textarea {
         padding: 8px;
+    }
+
+    slideshow > slide > description {
+        font-size: 18px;
+        bottom: 10%;
+    }
+
+    slideshow dots dot {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    slideshow dots {
+        border-radius: 4px;
+        padding: 5px;
     }
 }
